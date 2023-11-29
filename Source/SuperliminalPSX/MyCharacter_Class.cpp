@@ -5,6 +5,7 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 // Sets default values
 AMyCharacter_Class::AMyCharacter_Class()
@@ -41,6 +42,27 @@ void AMyCharacter_Class::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 }
 
+
+//Custom Box Trace function for Forced Perspective.	Determining Size of Object
+void AMyCharacter_Class::BoxTrace(USceneComponent* PickedObject, FVector StartBounds, float StartDistance, int StepSize, ETraceTypeQuery TraceChannel, TArray<AActor*> IgnoreActors, FVector &Location, float &Scale)
+{
+	float CurrentDistance;
+	FVector Newlocation;
+	FVector CurrentBounds = StartBounds;
+	FHitResult Hit;
+	for (int i = 10; i <= 500; i++) {
+		CurrentDistance = i * StepSize;
+		CurrentBounds = StartBounds * ((CurrentDistance / StartDistance) / GetActorScale3D().X);
+		Newlocation = (activeCam->GetComponentLocation()) + (activeCam->GetForwardVector() * CurrentDistance);
+		if (UKismetSystemLibrary::BoxTraceSingle(GetWorld(), Newlocation, Newlocation, CurrentBounds * 1.025, PickedObject->GetComponentRotation(), TraceChannel, false, IgnoreActors, EDrawDebugTrace::None, Hit, true)) {
+			Location = Newlocation;
+			Scale = ((CurrentDistance / StartDistance) / GetActorScale3D().X);
+			return;
+		}
+	}
+	Location = Newlocation;
+	Scale = ((CurrentDistance / StartDistance) / GetActorScale3D().X);
+}
 
 //Movement 
 void AMyCharacter_Class::MoveForward(float AxisValue)

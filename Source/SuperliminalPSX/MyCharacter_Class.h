@@ -8,6 +8,7 @@
 
 class UCameraComponent;
 class UCharacterMovementComponent;
+class USceneComponent;
 
 UCLASS()
 class SUPERLIMINALPSX_API AMyCharacter_Class : public ACharacter
@@ -34,13 +35,18 @@ private:
 		UCameraComponent* activeCam = NULL;
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Playersettings")
-		float MouseXSens = 25.f;
+		float MouseXSens = 35.f;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Playersettings")
-		float MouseYSens = 25.f;
+		float MouseYSens = 35.f;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Playersettings")
 		bool InverseMouseX = false;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Playersettings")
 		bool InverseMouseY = false;
+		
+
+	//Custom Box Trace function for Forced Perspective.	Determining Size of Object
+	UFUNCTION(BlueprintCallable, Category = "Prop")
+		void BoxTrace(USceneComponent* PickedObject, FVector StartBounds, float StartDistance, int StepSize, ETraceTypeQuery TraceChannel,TArray<AActor*> IgnoreActors, FVector &Location,float &Scale);
 
 	UCharacterMovementComponent* Movement;
 
