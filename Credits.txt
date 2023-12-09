@@ -1,5 +1,17 @@
+Credits
+
+UE4 Retro Shader by Dave Face
+
+Retro Meshes by Elbolilloduro
+
+Arcade Floor Texture - https://opengameart.org/content/arcade-carpet-textures-arcadecarpet512png
+
+Footsteps & Hit Sounds - Bartosz Kamol Kaminski
+
+Pop Audio - Mixikit
+
 Meshes - https://elbolilloduro.itch.io/paquete-de-modelos-low-poly-estilo-psx-2 
 
+Piano - https://free3d.com/user/wufudufu Piano
 
-Textures
-Arcade Floor https://opengameart.org/content/arcade-carpet-textures-arcadecarpet512png
+Taken huge help from PastaNoob and Unreal Forums

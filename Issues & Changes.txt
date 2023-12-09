@@ -1,0 +1,10 @@
+portals locked - Also demonstrates player size change
+better help for clicking - More tutorial text
+Interactable highlight - Every object that can be interacted with, highlights upon crosshair hover
+fix bookshelf - Bookshelf in the first level was not suppose to be interactable
+disable character physics push - Character cannot push physics actor
+size limit - Prevents objects from becoming super small
+duplication fix bouncing around - Now spawn in front of camera
+disable VR - This game is not made for VR 
+pickup fix - pickup spam
+Fixed Blurry Bookscase projection
