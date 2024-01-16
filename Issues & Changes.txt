@@ -2,3 +2,6 @@
 Fixed portals simulating physics
 Added Sounds and Audio Volumes
 Fixed Delayed Footstep when jumping
+Fixed Texture Scaling
+Prop Rotation issue Fixed
+
