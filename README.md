@@ -10,6 +10,10 @@ Retro styling and shaders were made by **Daveface**, you can get the retro shade
 
 Main tutorial by PastaNoob, you can find his tutorial over here https://www.youtube.com/watch?v=Em8hSFAamYo
 
+## Engine
+**Minimum engine version:** Unreal Engine 4.27
+You can use ue5 as well but turn off TSR, lumen and nanite. The retro shader won't work properly in editor viewport but it should work fine in packaged build.
+
 ## Main Components
 
 Most of the core project files are located in the `Content/Superliminal` folder. This directory contains the player character blueprint, props, portal, audio assets, and the central Blueprint Interface (`BPI`) that communication across all systems.
