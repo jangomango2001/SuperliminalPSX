@@ -62,7 +62,8 @@ Manages seamless non-Euclidean portal rendering and player teleportation. Becaus
     3. Use the dropdown picker to link the two portals together. This establishes the render-target perspective link and enables teleportation.
 *   ⚠️ **Critical Warning:** Do *not* enable `Is Duplicating Prop` on portal blueprints. Portal replication is not nsupported and may break portal logic.
 
-<img width="800" height="436" alt="image" src="https://github.com/user-attachments/assets/8dd246b7-5c2f-4ee6-a309-a1d6652b5167" />
+<img width="800" height="436" alt="ezgif-4f005d0b633fc46e" src="https://github.com/user-attachments/assets/ea714b9b-d21d-4f96-a0a0-bc094a0a9cba" />
+
 
 ---
 ## 📃 Credits
